@@ -207,8 +207,8 @@ let loser = "Glimmer";
 function theEliminator(contestants, loser) {
   for (let i = 0; i < contestants.length; i++) {
     let contestant = contestants[i];
-    if (contestant.includes("loser")) {
-      contestants.splice("loser");
+    if (contestant === loser) {
+      contestants.splice(i, 1);
     }
     return contestants;
   }
@@ -242,7 +242,15 @@ upperUpper(sampleString);
 
 function emailCheck(email) {
   email = String(email).trim();
+
+  if (email.includes("@")) {
+    return "email verified";
+  } else {
+    return "must provide a valid email address";
+  }
 }
+
+emailCheck("kelsey@gmail.com");
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
