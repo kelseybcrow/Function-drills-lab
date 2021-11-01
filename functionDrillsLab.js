@@ -145,6 +145,17 @@ printAllNames(namesArr);
 
 //CODE HERE
 
+function thatsOdd(num) {
+  let message = "That is odd indeed";
+  if (num % 2 === 0) {
+    message = "That's not odd";
+  }
+
+  return message;
+}
+
+let oddChecker = thatsOdd(3);
+
 ////////////////// PROBLEM 9 ////////////////////
 let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107];
 /* 
@@ -157,6 +168,21 @@ let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107];
 */
 
 //CODE HERE
+
+function bigOrSmall(arr) {
+  let answers = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      answers.push("big");
+    } else if (arr[i] <= 100) {
+      answers.push("small");
+    }
+  }
+
+  return answers;
+}
+
+let arrayEvaluator = bigOrSmall([5, 300, 10]);
 
 ////////////////// PROBLEM 10 ////////////////////
 let contestants = [
@@ -178,6 +204,16 @@ let loser = "Glimmer";
 
 //CODE HERE
 
+function theEliminator(contestants, loser) {
+  for (let i = 0; i < contestants.length; i++) {
+    let contestant = contestants[i];
+    if (contestant.includes("loser")) {
+      contestants.splice("loser");
+    }
+    return contestants;
+  }
+}
+
 ////////////////// PROBLEM 11 ////////////////////
 let sampleString = "Hi, my name is Kylo.";
 /*
@@ -186,6 +222,12 @@ let sampleString = "Hi, my name is Kylo.";
 */
 
 //CODE HERE
+
+function upperUpper(string) {
+  console.log(string.toUpperCase());
+}
+
+upperUpper(sampleString);
 
 ////////////////// PROBLEM 12 ////////////////////
 /*
@@ -197,6 +239,10 @@ let sampleString = "Hi, my name is Kylo.";
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+
+function emailCheck(email) {
+  email = String(email).trim();
+}
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
