@@ -261,11 +261,10 @@ emailCheck("kelsey@gmail.com");
 //CODE HERE
 
 function buyFrogs(gold) {
-  let amount = gold / 3;
-  return amount;
+  return gold / 3;
 }
 
-let totalFrogs = buyFrogs(4);
+let totalFrogs = buyFrogs(50);
 
 ////////////////// PROBLEM 14 ////////////////////
 /*
@@ -280,15 +279,30 @@ function buyFrogs2(gold) {
   return rounded;
 }
 
-let totalFrogs2 = buyFrogs2(51);
+let totalFrogs2 = buyFrogs2(70);
 
 ////////////////// PROBLEM 15 ////////////////////
+
 let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9];
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
+
+function checkAscending(arr) {
+  let comparisonValue = arr[0];
+  for (let i = 1; i < arr.length - 1; i++) {
+    if (arr[i] <= comparisonValue) {
+      return false;
+    } else {
+      comparisonValue = arr[i];
+    }
+  }
+  return true;
+}
+
+let arrayIsAscending = checkAscending(sampleArray);
 
 ////////////////// PROBLEM 16 ////////////////////
 
